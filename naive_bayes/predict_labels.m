@@ -10,6 +10,6 @@ function [Y_hat] = predict_labels(word_counts, cnn_feat, prob_feat, color_feat, 
 % Outputs:  Y_hat           nx1 predicted labels (1 for joy, 0 for sad)
 
 load('test.mat')
-Y_hat = predict(model, word_counts);
+Y_hat = full(predict(model, word_counts));
 
 end
